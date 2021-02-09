@@ -1,0 +1,4 @@
+#!/bin/bash
+# shortcut for ascp downloads
+new_ftp=$(echo $1 | sed 's/ftp.sra.ebi.ac.uk\//era-fasp@fasp.sra.ebi.ac.uk:/g')
+~/Applications/Aspera\ Connect.app/Contents/Resources/ascp -QT -l 300m -P33001 -i ~/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh $new_ftp .
